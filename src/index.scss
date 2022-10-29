@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+
+  @media (max-width: 1200px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 1025px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 55%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 60%;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 50%;
+  }
+
+  @media (min-width: 1500px) {
+    font-size: 62.5%;
+  }
+  @media (min-width: 1700px) {
+    font-size: 130%;
+  }
+  @media (min-width: 2000px) {
+    font-size: 150%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: segoe UI, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #647787;
+}
+a,
+a:visited {
+  text-decoration: none;
+  // color: inherit;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+input,
+input:active,
+textarea,
+textarea:active {
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+h1 {
+  font-size: 2.4rem;
+  margin: 0.5rem 0;
+}
+button {
+  font-size: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  * {
+    cursor: pointer;
+  }
+}
+
+li {
+  list-style: none;
+}
