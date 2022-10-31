@@ -43,6 +43,7 @@ html {
 body {
   font-size: 1.6rem;
   color: #647787;
+  background-color: #f7f8fa;
 }
 a,
 a:visited {
@@ -77,4 +78,75 @@ button {
 
 li {
   list-style: none;
+}
+
+.flex {
+  display: flex;
+  &.column {
+    flex-direction: column;
+    &.spaced > * {
+      margin: 0;
+      margin-top: 0.6rem;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  &.between {
+    justify-content: space-between;
+  }
+  &.around {
+    justify-content: space-around;
+  }
+  &.evenly {
+    justify-content: space-evenly;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.center-align {
+    align-items: center;
+  }
+  &.spaced > * {
+    margin: 0;
+    margin-left: 1.2rem;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &.spaced-lg > * {
+    margin-left: 1.2rem;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &.spaced-xl > * {
+    margin-left: 2.4rem;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  & .flex-one {
+    flex: 1;
+  }
+}
+
+.black {
+  color: #000000;
+}
+
+.gray {
+  color: #4f4f4f;
+}
+
+.title {
+  font-size: 3rem;
+  color: #262626;
+  margin: 2rem 0;
 }

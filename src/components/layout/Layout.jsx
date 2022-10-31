@@ -36,44 +36,48 @@ function Layout({ children }) {
           </li>
         </ul>
       </header>
-      <nav className={styles.side_bar}>
-        <p className={styles.gen_invoice}>GENERATE INVOICE</p>
-        {sideBarLinks.map((item, index) => {
-          return (
-            <li key={index} className={styles.nav_item}>
-              <div className={styles.title}>
-                {item.icon_src && (
-                  <img src={`icons/${item.icon_src}`} alt={item.title} />
-                )}
-                <span className={`${styles.nav_title}`}>{item.title}</span>
-              </div>
+      <div className={styles.content}>
+        <nav className={styles.side_bar}>
+          <p className={styles.gen_invoice}>GENERATE INVOICE</p>
+          {sideBarLinks.map((item, index) => {
+            return (
+              <li key={index} className={styles.nav_item}>
+                <div className={styles.title}>
+                  {item.icon_src && (
+                    <img src={`icons/${item.icon_src}`} alt={item.title} />
+                  )}
+                  <span className={`${styles.nav_title}`}>{item.title}</span>
+                </div>
 
-              <ul>
-                {item.children &&
-                  item.children.map((child, index) => {
-                    return (
-                      <li
-                        className={[
-                          styles.nav_children,
-                          active === child.title && styles.active,
-                        ].join(" ")}
-                        key={index}
-                        onClick={() => setActive(child.title)}
-                      >
-                        <img
-                          src={`icons/${child.icon_src}`}
-                          alt={child.title}
-                        />
-                        <span className={styles.nav_title}>{child.title}</span>
-                      </li>
-                    );
-                  })}
-              </ul>
-            </li>
-          );
-        })}
-      </nav>
-      <div className={styles.main_content}>{children}</div>
+                <ul>
+                  {item.children &&
+                    item.children.map((child, index) => {
+                      return (
+                        <li
+                          className={[
+                            styles.nav_children,
+                            active === child.title && styles.active,
+                          ].join(" ")}
+                          key={index}
+                          onClick={() => setActive(child.title)}
+                        >
+                          <img
+                            src={`icons/${child.icon_src}`}
+                            alt={child.title}
+                          />
+                          <span className={styles.nav_title}>
+                            {child.title}
+                          </span>
+                        </li>
+                      );
+                    })}
+                </ul>
+              </li>
+            );
+          })}
+        </nav>
+        {children}
+      </div>
     </div>
   );
 }
