@@ -38,6 +38,14 @@ table {
     tr {
       border-bottom: 0.1rem solid #cccfd4;
     }
+
+    tr:last-child {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: rgba(24, 118, 240, 0.03);
+    }
   }
 }
 
