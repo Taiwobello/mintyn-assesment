@@ -51,3 +51,9 @@ export const sideBarLinks = [
     icon_src: "single.svg",
   },
 ];
+
+export const defaultPagination = {
+  total: 0,
+  page: 1,
+  pageSize: 10,
+};
